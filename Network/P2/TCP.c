@@ -108,8 +108,8 @@ void UDPHeaderInfo(FILE *f,UDPHeader* header){
     else if((ntohs(header->src_port)==443) || (ntohs(header->dst_port)==443)){
         printf("Application : HTTPS\n");
     }
-    else if((ntohs(header->src_port)==123) || (ntohs(header->dst_port)==123)){
-        printf("Application : NTP\n");
+    else if((ntohs(header->src_port)==53) || (ntohs(header->dst_port)==53)){
+        printf("Application : DNS\n");
     }
 }
 
