@@ -103,7 +103,7 @@
 - little endian으로 작성되어 있어 parsing할 때 조심해야 한다. (ntohs,ntohl 함수 사용)
 - port number에 따라 해당 application을 구분하는데 몇가지 자주 사용되는 것만 명시하였다. 그 외의 것들은 "TCP/UDP" HeaderInfo 함수에 App type 부분에 추가가 필요하다.
 - TCPoption 함수는 TCP protocol이 감지 되었을 때 option의 길이를 파악해 그 option의 종류가 무엇인지 파악해준다. 
-
+----------
 * Application Type
     * port number = 22 : SSH
     * port number = 23 : Telnet
@@ -122,8 +122,20 @@ size_t fread (void * DstBuf, size_t ElementSize, size_t Count, FILE * FileStream
 
 ---------
 ## 결과
-- linux 환경에서 컴파일 후 다음 방식으로 출력하였다.
+- linux 환경에서 컴파일(gcc) 후 다음 방식으로 출력하였다.
 ```
-$./IP file.pcap  
+$./TCP file.pcap  
 ```
-<img width="50%" src="https://user-images.githubusercontent.com/86395683/147477125-1e1bcc41-8d52-4bf7-aa74-ab445ca69c16.PNG">
+<img width="50%" src="https://user-images.githubusercontent.com/86395683/147572871-88ce70f1-d81b-41fe-bd08-f1572158671b.png">
+<img width="50%" src="https://user-images.githubusercontent.com/86395683/147572872-b5b27a6e-96e8-494d-908b-ae7f76b88daf.png">
+<img width="50%" src="https://user-images.githubusercontent.com/86395683/147572873-055dab57-db73-4d53-a75c-0a0dc710c561.png">
+
+- 위의 세 packet은 처음 connection을 생성할 때의 통신인 "Three-way handshake"로 알수있다.
+- 차례로 SYN / SYN-ACK / ACK 임을 알 수 있다.
+- 셋의 Payload, 즉 Data가 0임에도 불구하고 각각의 Seq, ack number가 1씩 변화하는 모습을 볼 수 있다.
+
+||Sequence number|Acknowledgement number|
+|------|---|---|
+|SYN|2871516013|0|
+|SYN-ACK|1342220760|2871516014|
+|ACK|2871516014|1342220761|
