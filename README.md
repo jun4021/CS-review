@@ -7,7 +7,7 @@
 3. [기계학습원론](https://github.com/jun4021/CS-review/tree/master/Fundamental%20of%20Machine%20Learning)
 4. 운영체제
 5. 데이터베이스개론
-6. 프로그래밍언어
+6. [프로그래밍언어](https://github.com/jun4021/CS-review/tree/master/Programming%20Language)
 7. 소프트웨어공학개론
 8. 확률과랜덤프로세스
 9. 자료구조개론
