@@ -10,7 +10,7 @@
 6. [프로그래밍언어](https://github.com/jun4021/CS-review/tree/master/Programming%20Language)
 7. 소프트웨어공학개론
 8. 확률과랜덤프로세스
-9. 자료구조개론
+9. [자료구조개론](https://github.com/jun4021/CS-review/tree/master/DataStructure)
 10. 알고리즘개론
 
 --------
