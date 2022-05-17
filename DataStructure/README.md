@@ -58,26 +58,31 @@ Red-Black Tree 는 다음의 성질들을 만족하는 BST 이다.
 ## 4. Sorting
 
 1. Selection sort
+
 가장 작은 수부터 찾아 정렬하는 알고리즘
 
 ```O(n^2)```
 
 2. Bubble sort
+
 오른쪽 요소와 비교 후 정렬 반복
 
 ```O(n^2)```
 
 3. Insertion sort
+
 각 요소를 차례로 알맞은 위치에 삽입
 
 ```O(n) ~ O(n^2)```
 
 4. Quick sort
+
 pivot 을 사용하여 왼쪽 오른쪽으로 정렬
 
 ```O(nlog n) ~ O(n^2)```
 
 5. Merge sort
+
 divide and merge 
 
 ```O(nlog n)```
