@@ -3,4 +3,3 @@
 1. [Decision Tree, KNN, Logistic Regression](https://github.com/jun4021/CS-review/blob/master/Fundamental%20of%20Machine%20Learning/HW1/HW1.ipynb)
 2. [CNN](https://github.com/jun4021/CS-review/tree/master/Fundamental%20of%20Machine%20Learning/HW2)
 3. [Collaborative filtering](https://github.com/jun4021/CS-review/tree/master/Fundamental%20of%20Machine%20Learning/HW3)
-asaa
