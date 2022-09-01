@@ -3,6 +3,7 @@
 ## 목차
 1. ER Model
 2. EER Model
+3. Relational Model
 
 ## 1. ER Model
 - Entity (개체)
