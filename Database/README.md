@@ -57,3 +57,17 @@
 - Referential integrity(참조 무결성)
     - 서로 참조하고 받는 relation(FK에 의해)에서 tuple이 INSERT, DELETE, UPDATE되는 경우 참조 무결성을 위반할 수 있다.
     - Reject하거나 CACADE를 통해 NULL, DEFAULT로 작성하여 해결 가능하다.
+
+## 4. Relational Algebra
+1. SELECT
+    - Relation에서 주어진 <condition>을 만족하는 tuple 출력.
+2. PROJECT
+    - Relation에서 원하는 Attribute들만 가진 tuple 출력
+3. UNION, INTERSECTION, DIFFERENCE
+    - 집합에서의 합집합, 교집합, 차집합과 동일
+    - 두 Relation의 attibute 개수 및 domain이 같을 때.
+4. CARTESIN PRODUCT
+    - 두 Relation의 각각의 tuple을 모두 서로 연결하여 합침.
+5. JOIN
+    - 두 Relation에 속한 각 tuple 중 join condtion을 만족하는 것만 연결하여 합침.
+
