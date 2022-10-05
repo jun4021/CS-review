@@ -71,3 +71,26 @@
 5. JOIN
     - 두 Relation에 속한 각 tuple 중 join condtion을 만족하는 것만 연결하여 합침.
 
+
+## 5. Normalization (정규화)
+- 데이터의 중복을 줄이고 anomaly 방지, 무결성 제약조건을 만족시키기 위해서
+
+1. 1NF
+    - 각 tuple은 원자값으로 되어 있다.
+    - PK 로 고유하게 식별이 가능하다.
+
+2. 2NF
+    - Functinal Dependency (FD) : X에 값에 따라 Y값이 결정 될 때 ```X->Y```
+    - Partial Dependency (부분 종속) : Key에 속하지 않은 Y가 키 Set X의 Subset에 의해 종속되어 있을 때. 즉, {X1,X2} -> Y 에서 X1 -> Z 일 때
+
+    - 모든 tuple이 완전 종속이어야 한다.
+    - 부분 종속의 경우 테이블을 분리해서 나타낸다.
+
+3. 3NF
+    - Transitive Dependency (이행종속) : X -> Y and Y -> Z
+
+    - 어떤 non-prime attribute 도 key X에 의해 tranistive dependency를 만족하면 안된다.
+    - 즉, 오로지 기본 키에 의존해야 한다.
+    
+4. BCNF
+    - Super Key X로만 다른 attribute들이 결정되어야 한다.
