@@ -94,3 +94,13 @@
     
 4. BCNF
     - Super Key X로만 다른 attribute들이 결정되어야 한다.
+
+## 6. Transaction
+- Reference : https://d2.naver.com/helloworld/407507
+- RDBMS에서 DB에 접근하여 수행하는 작업 단위
+- 특징
+    - 원자성(Atomicity) : 트랜잭션 모두가 반영되거나, 반영되지 않아야 한다.
+    - 일관성(Consistency) : 트랜잭션 이후 DB의 제약, 규칙을 여전히 만족해야 한다.
+    - 독립성(Isolation) : 각각의 트랜잭션은 독립적으로 실행되어야 한다.
+    - 지속성(Durability) : 트랜잭션이 완료 시 결과는 영구적으로 반영되어야 한다. 
+
