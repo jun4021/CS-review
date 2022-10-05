@@ -10,10 +10,7 @@
 - [확률과랜덤프로세스](https://github.com/jun4021/CS-review/tree/master/Probability%20and%20Random%20Process)
 - 운영체제
 - 소프트웨어공학개론
-- 데이터베이스개론
+- [데이터베이스개론](https://github.com/jun4021/CS-review/tree/master/Database)
 - 알고리즘개론
-- 문제해결
-- 과학계산과딥러닝
-- 캡스톤설계프로젝트
 
 --------
