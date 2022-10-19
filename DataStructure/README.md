@@ -1,9 +1,10 @@
 # 자료구조개론
 
 1. Stack, Queue
-2. Tree
-3. Graph
-4. Sorting
+2. Priority Queue
+3. Tree
+4. Graph
+5. Sorting
 
 ## 1. Stack, Queue
 ### Stack
@@ -15,28 +16,21 @@
 
 들어간 순서대로 호출 가능
 
-### Priority Queue
+### 2. Priority Queue
 ```Heap```을 이용한 우선순위에 따라 정렬되는 ```Queue```
 
-Queue에 원소를 추가, 삭제하는데 ```O(log n)``` 필요
+### Heap
+* 완전 이진트리를 이용한 최대(최소)를 빠르게 찾는 데 특화 된 자료구조.
+* 노드 삽입 시 ```O(log n)```으로 새로운 노드는 부모 노드와 크기를 비교하여 위치를 잡아간다. 
+* 노드 삭제 시(루트 노드) 마지막 노드를 루트로 가져와 삽입과 마찬가지로 위치를 잡는다.
 
-## 2. Tree
+## 3. Tree
 ### Binary Tree
 루트 노드를 기준으로 두개 이하의 서브 트리를 갖는 자료구조
 탐색 연산은 ```O(h)```로 트리의 높이와 관련되어 있다.
 
-### Red-Black Tree
-Red-Black Tree 는 다음의 성질들을 만족하는 BST 이다.
 
-이진 트리의 편향성을 방지할 수 있다.
-
-1. 각 노드는 ```Red``` or ```Black```이라는 색깔을 갖는다.
-2. ```Root node``` 의 색깔은 ```Black```이다.
-3. 각 ```leaf node``` 는 ```black```이다.
-4. 어떤 노드의 색깔이 ```red```라면 두 개의 ```children``` 의 색깔은 모두 ```black``` 이다.
-5. 각 노드에 대해서 노드로부터 ```descendant leaves``` 까지의 단순 경로는 모두 같은 수의 ```black nodes``` 들을 포함하고 있다. 이를 해당 노드의 ```Black-Height```라고 한다. cf) Black-Height: 노드 x 로부터 노드 x 를 포함하지 않은 leaf node 까지의 simple path 상에 있는 black nodes 들의 개수
-
-## 3. Graph
+## 4. Graph
 ### 구현 방법
 
 1. 인접 행렬
@@ -49,40 +43,19 @@ Red-Black Tree 는 다음의 성질들을 만족하는 BST 이다.
 ### 탐색
 1. DFS
 
-```Stack``` 자료구조를 사용하여 구현.
+```Stack``` 자료구조 or 재귀를 사용하여 구현.
 
 2. BFS
 
 ```Queue``` 자료구조를 사용하여 구현. 최단 경로를 보장한다.
 
-## 4. Sorting
+## 5. Hash table (http://egloos.zum.com/sweeper/v/925740)
+특정 hash 함수를 이용하여 고정된 길이의 데이터로 매핑
+모든 데이터를 탐사하는 속도는 떨어지지만 특정 데이터를 찾는데 특화.
+- Collision 발생 해결 방안
+  - Chaining : 연결리스트를 활용하여 저장한다. 삽입은 용이하나 탐색, 삭제가 어려울 수 있음.
+  - Open Addressing : 다른 비어있는 주소를 탐사하여 삽입한다. 
+    - 선형 탐사 : 인접한 인덱스 먼저 탐사.
+    - 제곱 탐사 : n^2 차례로 탐색.
+    - 이중 해싱 : 두번째 hash 함수를 이용하여 충돌 시 다음 탐사 인덱스를 계산한다.
 
-1. Selection sort
-
-가장 작은 수부터 찾아 정렬하는 알고리즘
-
-```O(n^2)```
-
-2. Bubble sort
-
-오른쪽 요소와 비교 후 정렬 반복
-
-```O(n^2)```
-
-3. Insertion sort
-
-각 요소를 차례로 알맞은 위치에 삽입
-
-```O(n) ~ O(n^2)```
-
-4. Quick sort
-
-pivot 을 사용하여 왼쪽 오른쪽으로 정렬
-
-```O(nlog n) ~ O(n^2)```
-
-5. Merge sort
-
-divide and merge 
-
-```O(nlog n)```
