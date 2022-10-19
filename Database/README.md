@@ -4,6 +4,9 @@
 1. ER Model
 2. EER Model
 3. Relational Model
+4. Relational Algebra
+5. Normalization
+6. Transaction
 
 ## 1. ER Model
 - Entity (개체)
