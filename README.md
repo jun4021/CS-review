@@ -11,6 +11,6 @@
 - 운영체제
 - 소프트웨어공학개론
 - [데이터베이스개론](https://github.com/jun4021/CS-review/tree/master/Database)
-- 알고리즘개론
+- [알고리즘개론](https://github.com/jun4021/CS-review/tree/master/Algorithm)
 
 --------
