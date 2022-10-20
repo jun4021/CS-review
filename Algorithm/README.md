@@ -2,6 +2,9 @@
 
 ## 목차
 1. Sorting
+2. Spanning Tree
+3. 최단 거리 알고리즘
+4. 문자열 패턴 매칭
 ## 1. Sorting
   1. Bubble sort
   - 인접한 두 원소 비교 후 swap, 한 칸씩 전진
