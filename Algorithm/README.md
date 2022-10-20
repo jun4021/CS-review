@@ -22,7 +22,7 @@
   - 기준 원소 pivot 을 사용하여 왼쪽 오른쪽으로 정렬 (divide)
   - 분할된 두 배열도 재귀적으로 반복한다.
   - pivot 값이 최소나 최대로 지정되면 최악 ```O(n^2)``` 최선,평균의 경우 ```O(nlog n)```
-  Q.  JAVA Arrays.sort() : DualPivotQuicksort -> 배열의 크기에 따라 Insertion < Quick < Merge 순으로 사용
+  - Q.  JAVA Arrays.sort() : DualPivotQuicksort -> 배열의 크기에 따라 Insertion < Quick < Merge 순으로 사용
     - DualPivotQuicksort은 Quick sort의 최악을 줄이기 위해 pivot을 두개 사용하여 3개로 분할해 정렬하는 알고리즘이다.
   5. Merge sort
   - 요소를 쪼개고 순차적으로 비교하며 정렬 -> 순차적으로 접근한다는 특징으로 linkedlist 정렬에 효율적
@@ -33,7 +33,7 @@
   6. Heap sort
   - Heap 자료구조를 이용한 정렬로 이미 정렬된 배열에 요소를 추가하는 게 용이하다.
 
-  Q. Quick, Merge, Heap 각각의 강점?
+  - Q. Quick, Merge, Heap 각각의 강점?
     - Quick : 평균적으로 가장 빠르다. But n이 작을 때, function call(재귀) overhead가 증가 
     - Merge : 한정된 메모리에서 데이터 양이 다 불러올 수 없을 정도로 많을 때.
     - Heap : 정렬된 배열에 새로운 값을 추가할 때 ```O(log n)``` 빠름.
