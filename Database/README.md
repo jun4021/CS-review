@@ -107,3 +107,15 @@
     - 독립성(Isolation) : 각각의 트랜잭션은 독립적으로 실행되어야 한다.
     - 지속성(Durability) : 트랜잭션이 완료 시 결과는 영구적으로 반영되어야 한다. 
 
+- 트랜잭션 격리 수준 (다른 트랜잭션이 관여하지 못하게 막는 것)
+0. read uncommitted : 트랜잭션에서 처리중 or 커밋되지 않은 데이터 읽기 가능.
+1. read committed : 커밋 이후에만 접근 가능. 그 전까지 대기(undo -> 데이터 읽음)
+2. repeatable read : 한 트랜잭션에서 하나의 스냅샷만 사용.
+3. Serializable : 완벽한 읽기 일관성 제공
+
+    
+## 7. Index
+- 자주 조회되는 column -> index table 제작, SELECT 시 빠르게 조회할 수 있도록
+- 대신 INSERT,DELETE,UPDATE 등을 실행할 때 손실 발생. 
+- B tree : 자식 노드가 여러개 가능.
+- B+ tree : 인덱스(non-leaf), 데이터(leaf) 노드 분리 // 빠르게 데이터(leaf) 노드를 탐색 후 데이터 노드끼리 연결리스트로 연결되어 있다는 특징이 있음(https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html)
